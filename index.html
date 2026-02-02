@@ -287,7 +287,11 @@
       if (d < 140) moveNo(e.clientX, e.clientY);
     });
 
-    noBtn.addEventListener("click", e => e.preventDefault());
+    noBtn.addEventListener("click", e => {
+      e.preventDefault();
+      moveNo(e.clientX, e.clientY); // RUN AWAY ON CLICK
+    });
+
 
     /* ---------- YES CLICK ---------- */
     yesBtn.addEventListener("click", () => {
@@ -300,6 +304,7 @@
   </script>
 </body>
 </html>
+
 
 
 
