@@ -289,8 +289,12 @@
 
     noBtn.addEventListener("click", e => {
       e.preventDefault();
-      moveNo(e.clientX, e.clientY); // RUN AWAY ON CLICK
+      const z = zone.getBoundingClientRect();
+      const fakeX = z.left + Math.random() * z.width;
+      const fakeY = z.top + Math.random() * z.height;
+      moveNo(fakeX, fakeY);
     });
+
 
 
     /* ---------- YES CLICK ---------- */
@@ -304,6 +308,7 @@
   </script>
 </body>
 </html>
+
 
 
 
