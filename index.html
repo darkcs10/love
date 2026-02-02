@@ -245,9 +245,15 @@
 
     /* ---------- YES BUTTON GROWS ---------- */
     let yesScale = 1;
+    let noScale = 1;
     function growYes() {
+      // YES grows
       yesScale = Math.min(2.2, yesScale + 0.1);
       yesBtn.style.transform = `translateY(-50%) scale(${yesScale})`;
+    
+      // NO shrinks
+      noScale = Math.max(0.45, noScale - 0.08);
+      noBtn.style.transform = `scale(${noScale})`;
     }
 
     /* ---------- NO BUTTON RUNS AWAY ---------- */
@@ -273,7 +279,7 @@
 
       noBtn.style.left = newLeft + "px";
       noBtn.style.top = newTop + "px";
-      noBtn.style.transform = "none";
+      noBtn.style.transform = `scale(${noScale})`;
 
       growYes();
     }
@@ -308,6 +314,7 @@
   </script>
 </body>
 </html>
+
 
 
 
