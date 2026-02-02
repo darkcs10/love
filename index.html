@@ -253,7 +253,7 @@
     
       // NO shrinks
       noScale = Math.max(0.45, noScale - 0.08);
-      noBtn.style.transform = `scale(${noScale})`;
+      noBtn.style.transform = `translateY(-50%) scale(${noScale})`;
     }
 
     /* ---------- NO BUTTON RUNS AWAY ---------- */
@@ -279,7 +279,7 @@
 
       noBtn.style.left = newLeft + "px";
       noBtn.style.top = newTop + "px";
-      noBtn.style.transform = `scale(${noScale})`;
+      noBtn.style.transform = `translateY(-50%) scale(${noScale})`;
 
       growYes();
     }
@@ -314,6 +314,7 @@
   </script>
 </body>
 </html>
+
 
 
 
